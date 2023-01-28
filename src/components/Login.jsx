@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -16,9 +17,9 @@ const Login = () => {
         </Col>
 
         <Col>
-          <Form className=" border-danger">
+          <Form className=" border-danger text-md-start">
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+                <h3>Email Address</h3>
               <Form.Control type="email" placeholder="Enter email" />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
@@ -32,9 +33,12 @@ const Login = () => {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="warning" type="submit">
               Submit
             </Button>
+
+            <p>Don't have an account? <Link to="/signup" className="text-warning"> <i class="fa-solid fa-user-plus"></i>Signup here</Link> </p>
+
           </Form>{" "}
         </Col>
       </Row>

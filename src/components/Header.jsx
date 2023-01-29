@@ -4,11 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       {" "}
-      <Navbar className="text-bg-warning">
+      <Navbar className="text-bg-warning border border-dark">
         <Nav className="p-3">
           <h2>
             {" "}
@@ -21,6 +21,7 @@ const Header = () => {
             <NavLink to="/signup" className="navlinks mx-2 text-dark">
               Signup<i className="fa-solid fa-user-plus"></i>
             </NavLink>
+            <p>{props.name ? `Welcome -  ${props.name}` : " "}</p>
           </h2>
         </Nav>
       </Navbar>
